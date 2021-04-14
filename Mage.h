@@ -10,7 +10,9 @@ class Mage{
         std::string _nomMage;
         int _pvMage ;
         bool _mort = false;
-        int _zone[4];
+        std::string _nomMonstre[4];
+        int _pvMonstre[4];
+        int _atkMonstre[4];
         
     public:
         int getPvMage();
@@ -19,8 +21,8 @@ class Mage{
         int setMortMage(bool mort);
 
         void attaqueMonstre(Monstre*cible);
-        void attaqueJoueur(Mage*cible);
-        
+        void attaqueJoueur(Monstre*cible);
+
         void afficheZone();
         void invoqueMonstre();
 

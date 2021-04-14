@@ -6,6 +6,8 @@
 #include <iostream>
 #include <string>
 
+    Monstre monstre1 = Monstre("teste",2,3);
+
     int Mage::getPvMage(){
         return _pvMage;
     }
@@ -18,22 +20,11 @@
         _mort = mort;
     }
 
-    /*void Mage::attaqueJoueur(Mage*cible){
-        std::cout << "---------" << std::endl;
-        std::cout << _nomMage << " ATTAQUE " << std::endl;
-        std::cout << "---------" << std::endl;
-        _pvMage = std::max(0,_pvMage - cible->getAtk());
-        cible->setPv(std::max(0,cible->getPv() - _atk));
-        _dispo = false;
-        cible->setDispo(false);
-        if (_pv == 0){
-            _mort = true;
-            std::cout << _nom << " a succombé "<< std::endl;
-            std::cout << "---------" << std::endl;}
-        if (cible->getPv() == 0){
-            cible->setMort(true);
-            std::cout << "---------" << std::endl;}
+    /*void Mage::attaqueJoueur(Monstre*cible){
+        monstre1.attaqueMonstre(Monstre * cible);
+
     }*/
+
     void Mage::afficheZone(){
         for(int i=0;i<4;i++){
             if (_nomMonstre [ i ] != " " ) {
@@ -65,10 +56,12 @@
                 _atkMonstre [ i ] = atkMonstre;
                 return;
             }
-            std::cout << " Il y a trop de monstres sur le terrain " << std::endl;
+            else{
+                std::cout << " Il y a trop de monstres sur le terrain " << std::endl;
+            }
         }
     }
-    /*void Monstre::attaqueMonstre(Monstre * cible){
+    /*void Mage::attaqueMonstre(Monstre * cible){
 
         std::cout << "---------" << std::endl;
         std::cout << _nom << " ATTAQUE " << std::endl;
