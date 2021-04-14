@@ -1,5 +1,5 @@
-#ifndef GRILLE_CPP
-#define GRILLE_CPP
+#ifndef MONSTRE_CPP
+#define MONSTRE_CPP
 
 #include "Monstre.h"
 #include <iostream>
